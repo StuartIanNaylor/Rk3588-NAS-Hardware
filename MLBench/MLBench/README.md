@@ -171,3 +171,86 @@ cooling_down = 1
   vision_transformer  min = 1192.51  max = 1193.71  avg = 1193.03
           FastestDet  min =    8.38  max =    8.41  avg =    8.40
 ```
+https://github.com/ggerganov/whisper.cpp
+
+Linux ubuntu 6.6.0 #1 SMP PREEMPT Opi5 4GB performance governor
+```
+memcpy: 10.50 GB/s (1 thread)
+sum:    136902081526.000000
+
+Running ggml_mul_mat benchmark with 4 threads
+
+  64 x   64: Q4_0     3.5 GFLOPS (128 runs) | Q4_1     3.2 GFLOPS (128 runs)
+  64 x   64: Q5_0     2.8 GFLOPS (128 runs) | Q5_1     2.7 GFLOPS (128 runs) | Q8_0     3.5 GFLOPS (128 runs)
+  64 x   64: F16      3.4 GFLOPS (128 runs) | F32      3.4 GFLOPS (128 runs)
+ 128 x  128: Q4_0     7.9 GFLOPS (128 runs) | Q4_1     8.1 GFLOPS (128 runs)
+ 128 x  128: Q5_0     6.2 GFLOPS (128 runs) | Q5_1     6.5 GFLOPS (128 runs) | Q8_0     7.9 GFLOPS (128 runs)
+ 128 x  128: F16      9.4 GFLOPS (128 runs) | F32      7.5 GFLOPS (128 runs)
+ 256 x  256: Q4_0    10.5 GFLOPS (128 runs) | Q4_1    11.1 GFLOPS (128 runs)
+ 256 x  256: Q5_0     7.9 GFLOPS (128 runs) | Q5_1     8.5 GFLOPS (128 runs) | Q8_0    10.3 GFLOPS (128 runs)
+ 256 x  256: F16     14.5 GFLOPS (128 runs) | F32      9.3 GFLOPS (128 runs)
+ 512 x  512: Q4_0    11.7 GFLOPS ( 44 runs) | Q4_1    12.4 GFLOPS ( 47 runs)
+ 512 x  512: Q5_0     8.8 GFLOPS ( 33 runs) | Q5_1     9.7 GFLOPS ( 37 runs) | Q8_0    11.4 GFLOPS ( 43 runs)
+ 512 x  512: F16     17.8 GFLOPS ( 67 runs) | F32      9.2 GFLOPS ( 35 runs)
+1024 x 1024: Q4_0    32.2 GFLOPS ( 15 runs) | Q4_1    33.2 GFLOPS ( 16 runs)
+1024 x 1024: Q5_0    24.9 GFLOPS ( 12 runs) | Q5_1    25.7 GFLOPS ( 12 runs) | Q8_0    35.2 GFLOPS ( 17 runs)
+1024 x 1024: F16     38.0 GFLOPS ( 18 runs) | F32     27.5 GFLOPS ( 13 runs)
+2048 x 2048: Q4_0    57.7 GFLOPS (  4 runs) | Q4_1    59.5 GFLOPS (  4 runs)
+2048 x 2048: Q5_0    38.0 GFLOPS (  3 runs) | Q5_1    39.3 GFLOPS (  3 runs) | Q8_0    64.3 GFLOPS (  4 runs)
+2048 x 2048: F16     77.9 GFLOPS (  5 runs) | F32     38.4 GFLOPS (  3 runs)
+4096 x 4096: Q4_0    63.4 GFLOPS (  3 runs) | Q4_1    64.7 GFLOPS (  3 runs)
+4096 x 4096: Q5_0    39.9 GFLOPS (  3 runs) | Q5_1    41.7 GFLOPS (  3 runs) | Q8_0    70.3 GFLOPS (  3 runs)
+4096 x 4096: F16     78.6 GFLOPS (  3 runs) | F32     37.2 GFLOPS (  3 runs)
+
+Running benchmark for all models
+This can take a while!
+
+|    CPU |     OS |           Config |       Model |  Th |    Enc. |    Dec. |      PP |  Commit |
+|    --- |    --- |              --- |         --- | --- |     --- |     --- |     --- |     --- |
+| <todo> | <todo> |             NEON |        tiny |   4 |  853.56 |    7.37 |  161.81 | f96e1c5 |
+| <todo> | <todo> |             NEON |        base |   4 | 1847.86 |   13.00 |  338.18 | f96e1c5 |
+| <todo> | <todo> |             NEON |       small |   4 | 6289.17 |   39.19 | 1109.25 | f96e1c5 |
+| <todo> | <todo> |             NEON |      medium |   4 |      ms |   67.99 | 3454.96 | f96e1c5 |
+| <todo> | <todo> |             NEON |       large |   4 |      ms |  107.50 | 6541.15 | f96e1c5 |
+```
+
+Linux raspberrypi 6.1.0-rpi4-rpi-2712 Rpi5 4GB performance governor
+```
+memcpy: 6.03 GB/s (1 thread)
+sum:    136902081526.000000
+
+Running ggml_mul_mat benchmark with 4 threads
+
+  64 x   64: Q4_0     5.7 GFLOPS (128 runs) | Q4_1     5.5 GFLOPS (128 runs)
+  64 x   64: Q5_0     5.3 GFLOPS (128 runs) | Q5_1     5.1 GFLOPS (128 runs) | Q8_0     5.6 GFLOPS (128 runs)
+  64 x   64: F16      5.6 GFLOPS (128 runs) | F32      5.7 GFLOPS (128 runs)
+ 128 x  128: Q4_0    22.8 GFLOPS (128 runs) | Q4_1    24.1 GFLOPS (128 runs)
+ 128 x  128: Q5_0    12.3 GFLOPS (128 runs) | Q5_1    11.8 GFLOPS (128 runs) | Q8_0    11.3 GFLOPS (128 runs)
+ 128 x  128: F16     15.4 GFLOPS (128 runs) | F32     26.5 GFLOPS (128 runs)
+ 256 x  256: Q4_0    49.7 GFLOPS (128 runs) | Q4_1    50.3 GFLOPS (128 runs)
+ 256 x  256: Q5_0    41.8 GFLOPS (128 runs) | Q5_1    39.0 GFLOPS (128 runs) | Q8_0    59.7 GFLOPS (128 runs)
+ 256 x  256: F16     65.2 GFLOPS (128 runs) | F32     48.7 GFLOPS (128 runs)
+ 512 x  512: Q4_0    63.0 GFLOPS (128 runs) | Q4_1    63.6 GFLOPS (128 runs)
+ 512 x  512: Q5_0    50.5 GFLOPS (128 runs) | Q5_1    47.3 GFLOPS (128 runs) | Q8_0    77.7 GFLOPS (128 runs)
+ 512 x  512: F16     85.6 GFLOPS (128 runs) | F32     53.3 GFLOPS (128 runs)
+1024 x 1024: Q4_0    68.1 GFLOPS ( 32 runs) | Q4_1    69.8 GFLOPS ( 33 runs)
+1024 x 1024: Q5_0    54.1 GFLOPS ( 26 runs) | Q5_1    51.2 GFLOPS ( 24 runs) | Q8_0    86.0 GFLOPS ( 41 runs)
+1024 x 1024: F16     93.6 GFLOPS ( 44 runs) | F32     49.0 GFLOPS ( 23 runs)
+2048 x 2048: Q4_0    70.8 GFLOPS (  5 runs) | Q4_1    72.8 GFLOPS (  5 runs)
+2048 x 2048: Q5_0    56.1 GFLOPS (  4 runs) | Q5_1    53.0 GFLOPS (  4 runs) | Q8_0    88.1 GFLOPS (  6 runs)
+2048 x 2048: F16     93.7 GFLOPS (  6 runs) | F32     44.4 GFLOPS (  3 runs)
+4096 x 4096: Q4_0    72.6 GFLOPS (  3 runs) | Q4_1    74.8 GFLOPS (  3 runs)
+4096 x 4096: Q5_0    56.2 GFLOPS (  3 runs) | Q5_1    53.3 GFLOPS (  3 runs) | Q8_0    88.4 GFLOPS (  3 runs)
+4096 x 4096: F16     86.7 GFLOPS (  3 runs) | F32     39.7 GFLOPS (  3 runs)
+
+Running benchmark for all models
+This can take a while!
+
+|    CPU |     OS |           Config |       Model |  Th |    Enc. |    Dec. |      PP |  Commit |
+|    --- |    --- |              --- |         --- | --- |     --- |     --- |     --- |     --- |
+| <todo> | <todo> |             NEON |        tiny |   4 | 1049.00 |    6.74 |  149.32 | f96e1c5 |
+| <todo> | <todo> |             NEON |        base |   4 | 2362.92 |   12.60 |  361.37 | f96e1c5 |
+| <todo> | <todo> |             NEON |       small |   4 | 8081.87 |   35.65 | 1283.34 | f96e1c5 |
+| <todo> | <todo> |             NEON |      medium |   4 |      ms |  105.77 | 4360.80 | f96e1c5 |
+| <todo> | <todo> |             NEON |       large |   4 |      ms |  189.93 | 8158.78 | f96e1c5 |
+```
