@@ -1,5 +1,6 @@
 https://github.com/Tencent/ncnn/tree/master/benchmark
 
+Linux raspberrypi 6.1.0-rpi4-rpi-2712 Rpi5 4GB performance governor
 ```
 pi@raspberrypi:~/ncnn/benchmark $ ../build/benchmark/benchncnn 10 4 0 -1 1
 loop_count = 10
@@ -85,6 +86,7 @@ cooling_down = 1
           FastestDet  min =    7.53  max =    7.66  avg =    7.60
 ```
 
+Linux ubuntu 6.6.0 #1 SMP PREEMPT Opi5 4GB performance governor
 ```
 ubuntu@ubuntu:~/ncnn/benchmark$ ../build/benchmark/benchncnn  10 4 0 -1 1
 loop_count = 10
