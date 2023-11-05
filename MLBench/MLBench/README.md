@@ -254,3 +254,20 @@ This can take a while!
 | <todo> | <todo> |             NEON |      medium |   4 |      ms |  105.77 | 4360.80 | f96e1c5 |
 | <todo> | <todo> |             NEON |       large |   4 |      ms |  189.93 | 8158.78 | f96e1c5 |
 ```
+
+https://github.com/ggerganov/llama.cpp
+```
+(venv) pi@raspberrypi:~/llama.cpp $ ./llama-bench -m  models/3b/open-llama-3b-q4_0.gguf -t 4
+| model                          |       size |     params | backend    |    threads | test       |              t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ---------: | ---------- | ---------------: |
+| llama 3B mostly Q4_0           |   1.84 GiB |     3.43 B | CPU        |          4 | pp 512     |      9.77 ± 0.01 |
+| llama 3B mostly Q4_0           |   1.84 GiB |     3.43 B | CPU        |          4 | tg 128     |      5.42 ± 0.00 |
+
+build: c41ea36 (1487)
+
+ubuntu@ubuntu:~/llama.cpp$ ./llama-bench -m models/3b/open-llama-3b-q4_0.gguf -t 4
+| model                          |       size |     params | backend    |    threads | test       |              t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ---------: | ---------- | ---------------: |
+| llama 3B mostly Q4_0           |   1.84 GiB |     3.43 B | CPU        |          4 | pp 512     |      9.14 ± 0.01 |
+| llama 3B mostly Q4_0           |   1.84 GiB |     3.43 B | CPU        |          4 | tg 128     |      7.06 ± 0.05 |
+```
