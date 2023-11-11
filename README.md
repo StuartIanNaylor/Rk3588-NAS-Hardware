@@ -1,7 +1,7 @@
 # Rk3588-NAS-Hardware
 Rk3588-NAS Hardware
 
-6x Western Digital WD GreenPower 1tb SATA 3.5"
+6x Western Digital WD GreenPower 1tb SATA 3.5". Likely the slowest you can get and all benches will be bottlenecked by the drives
 
 https://www.ebay.co.uk/itm/175548988967 M.2 To SATA3.0 6Gbps ASM1166 PCIE £19.43
 
