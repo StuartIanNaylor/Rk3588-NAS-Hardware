@@ -82,7 +82,12 @@ ubuntu@ubuntu:/mnt/raid5$ dd if=/dev/zero of=./test bs=8k count=500k conv=fsync;
 512000+0 records out
 4194304000 bytes (4.2 GB, 3.9 GiB) copied, 17.223 s, 244 MB/s
 ```
+```
+ubuntu@ubuntu:/mnt/raid5$ sudo hdparm -t /dev/md0
 
+/dev/md0:
+ Timing buffered disk reads: 878 MB in  3.01 seconds = 291.89 MB/sec
+```
 
 
 
