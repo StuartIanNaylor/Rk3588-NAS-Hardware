@@ -59,7 +59,22 @@ Consistency Policy : bitmap
        4       8       65        4      active sync   /dev/sde1
        6       8       81        5      active sync   /dev/sdf1
 ```
+```
 
+ubuntu@ubuntu:/mnt/raid5$ iozone -s 102400
+
+
+        File size set to 102400 kB
+        Command line used: iozone -s 102400
+        Output is in kBytes/sec
+        Time Resolution = 0.000001 seconds.
+        Processor cache size set to 1024 kBytes.
+        Processor cache line size set to 32 bytes.
+        File stride size set to 17 * record size.
+                                                              random    random     bkwd    record    stride
+              kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread
+          102400       4  1172444  2516654  5832082  3731904  2796898  2008939  3261253   4400499   2837269  2354880  2340035  5575866  5607899
+```
 
 
 
