@@ -75,7 +75,13 @@ ubuntu@ubuntu:/mnt/raid5$ iozone -s 102400
               kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread
           102400       4  1172444  2516654  5832082  3731904  2796898  2008939  3261253   4400499   2837269  2354880  2340035  5575866  5607899
 ```
+```
 
+ubuntu@ubuntu:/mnt/raid5$ dd if=/dev/zero of=./test bs=8k count=500k conv=fsync; rm -f ./test
+512000+0 records in
+512000+0 records out
+4194304000 bytes (4.2 GB, 3.9 GiB) copied, 17.223 s, 244 MB/s
+```
 
 
 
