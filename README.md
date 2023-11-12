@@ -60,6 +60,46 @@ Consistency Policy : bitmap
        6       8       81        5      active sync   /dev/sdf1
 ```
 ```
+        Record Size 1 kB
+        File size set to 1048576 kB
+        Command line used: iozone -t1 -i0 -i2 -r1k -s1g ./
+        Output is in kBytes/sec
+        Time Resolution = 0.000001 seconds.
+        Processor cache size set to 1024 kBytes.
+        Processor cache line size set to 32 bytes.
+        File stride size set to 17 * record size.
+        Throughput test with 1 process
+        Each process writes a 1048576 kByte file in 1 kByte records
+
+        Children see throughput for  1 initial writers  =  758864.31 kB/sec
+        Parent sees throughput for  1 initial writers   =  174167.80 kB/sec
+        Min throughput per process                      =  758864.31 kB/sec
+        Max throughput per process                      =  758864.31 kB/sec
+        Avg throughput per process                      =  758864.31 kB/sec
+        Min xfer                                        = 1048576.00 kB
+
+        Children see throughput for  1 rewriters        = 1221363.88 kB/sec
+        Parent sees throughput for  1 rewriters         =  203864.18 kB/sec
+        Min throughput per process                      = 1221363.88 kB/sec
+        Max throughput per process                      = 1221363.88 kB/sec
+        Avg throughput per process                      = 1221363.88 kB/sec
+        Min xfer                                        = 1048576.00 kB
+
+        Children see throughput for 1 random readers    =  760140.56 kB/sec
+        Parent sees throughput for 1 random readers     =  693441.61 kB/sec
+        Min throughput per process                      =  760140.56 kB/sec
+        Max throughput per process                      =  760140.56 kB/sec
+        Avg throughput per process                      =  760140.56 kB/sec
+        Min xfer                                        = 1048576.00 kB
+
+        Children see throughput for 1 random writers    =  597619.56 kB/sec
+        Parent sees throughput for 1 random writers     =   96005.26 kB/sec
+        Min throughput per process                      =  597619.56 kB/sec
+        Max throughput per process                      =  597619.56 kB/sec
+        Avg throughput per process                      =  597619.56 kB/sec
+        Min xfer                                        = 1048576.00 kB
+```
+```
 
 ubuntu@ubuntu:/mnt/raid5$ iozone -s 102400
 
