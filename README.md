@@ -128,6 +128,9 @@ ubuntu@ubuntu:/mnt/raid5$ sudo hdparm -t /dev/md0
 /dev/md0:
  Timing buffered disk reads: 878 MB in  3.01 seconds = 291.89 MB/sec
 ```
-
+The above is just a test on Mainline Ubuntu to install OMV use a Debian Cli image.
+https://wiki.omv-extras.org/doku.php?id=omv6:armbian_bullseye_install
+Any Debian Bullseye Cli image as used the Radxa images.
+https://github.com/radxa-build/rock-5b/releases
 
 
