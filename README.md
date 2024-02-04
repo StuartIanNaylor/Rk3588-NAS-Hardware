@@ -1,6 +1,6 @@
 # Rk3588-NAS-Hardware
 Rk3588-NAS Hardware
-![Rk3588-NAS Hardware]([http://url/to/img.png](https://github.com/StuartIanNaylor/Rk3588-NAS-Hardware/blob/main/img/rk3588nas1.jpg)
+![Rk3588-NAS Hardware](https://github.com/StuartIanNaylor/Rk3588-NAS-Hardware/blob/main/img/rk3588nas1.jpg)
 
 6x Western Digital WD GreenPower 1tb SATA 3.5". Likely the slowest you can get and all benches will be bottlenecked by the drives
 
